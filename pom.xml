@@ -137,7 +137,7 @@
 			<dependency>
 				<groupId>org.apache.tiles</groupId>
 				<artifactId>tiles-jsp</artifactId>
-				<version>3.0.4</version>
+				<version>3.0.8</version>
 				<exclusions>
 					<exclusion>
 						<groupId>javax.servlet</groupId>
@@ -585,6 +585,14 @@
 						</path>
 						<!-- other annotation processors -->
 					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<!-- Skip tests while building jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
 
